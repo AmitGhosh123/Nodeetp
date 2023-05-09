@@ -1,0 +1,2 @@
+name = amit ghosh, class 7
+name = sumit

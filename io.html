@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Client Example</title>
+</head>
+<body>
+  <h1 style="font-family: sans-serif;"> Thankyou</h1>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    socket.on('odd-visitor-count', count => {
+      console.log(`Odd visitor count: ${count}`);
+    });
+  </script>
+</body>
+</html>

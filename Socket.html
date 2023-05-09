@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>program</title>
+   </head>
+   
+   <body>
+      <form method="POST" action="/insert-data">
+        <label for="name">Name</label>
+      <input type="text" id="data", name="data"><br>
+      <label for="name">Registration number</label>
+      <input type="text" id="reg", name="reg">
+      <input type="submit" value="Send" onclick="a()">
+   </form>
+      <script src = "/socket.io/socket.io.js"></script>
+      <script>
+         var socket = io();
+   function a(){
+     socket.emit('clientEvent', document.getElementById('data').value);
+     socket.emit('clientEvent', document.getElementById('reg').value);
+     }
+      </script>
+   </body>
+</html>

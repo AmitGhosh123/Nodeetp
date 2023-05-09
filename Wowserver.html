@@ -1,0 +1,20 @@
+<!-- Write a program using socket.io to send "wow server" message from client to the server after every 2 seconds but after 12 seconds the client must stop sending this "wow server" message to the server.
+ After waiting for another 5 seconds, the client again must start sending the message to the server. -->
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <title>Socket.IO client</title>
+     <script src="https://cdn.socket.io/socket.io-3.1.0.min.js"></script>
+     <script>
+       const socket = io();
+       socket.on('wow', (message) => {
+         console.log(`Received message from server: ${message}`);
+       });
+     </script>
+   </head>
+   <body>
+     <h1>Socket.IO client</h1>
+   </body>
+ </html>
+ 
